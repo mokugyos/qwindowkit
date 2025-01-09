@@ -72,7 +72,8 @@ set(QWINDOWKIT_INSTALL_NAME ${PROJECT_NAME})
 # ----------------------------------
 # Find basic dependencies
 # ----------------------------------
-find_package(qmsetup QUIET)
+message("find CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
+find_package(qmsetup)
 
 if(NOT TARGET qmsetup::library)
     # Modify this variable according to your project structure
